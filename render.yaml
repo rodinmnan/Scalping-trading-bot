@@ -3,10 +3,16 @@ services:
     name: scalping-bot
     env: python
     plan: free
+    region: oregon
+    pythonVersion: "3.9.16"
     buildCommand: |
       python -m pip install --upgrade pip setuptools wheel
       pip install -e .
     startCommand: python main.py
-buildCommand: |
-  python -m pip install --upgrade pip setuptools wheel
-  pip install --no-deps -e .
+    envVars:
+      - key: TRADEMADE_API_KEY
+        sync: false
+      - key: TWELVE_DATA_API_KEY
+        sync: false
+      - key: TELEGRAM_TOKEN
+        sync: false
