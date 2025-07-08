@@ -1,14 +1,9 @@
-/forex-trading-bot
-│
-├── main.py               # Main bot code (from previous example)
-├── requirements.txt      # Python dependencies
-├── runtime.txt           # Python version
-├── .env.example          # Template for environment variables
-├── README.md             # Project documentation
-├── .gitignore            # Ignore sensitive files
-└── /utils                # Optional utilities
-    ├── backup_state.py   # State preservation scripts
-    └── health_check.py   # Render uptime monitoring
+.
+├── main.py
+├── setup.py
+├── render.yaml
+├── runtime.txt
+└── (optional: requirements.txt)
 import os
 import logging
 import time
