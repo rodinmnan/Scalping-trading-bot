@@ -1,0 +1,8 @@
+python-dotenv==1.0.0
+requests==2.31.0
+pandas==2.0.3
+python-telegram-bot==20.3
+pytz==2023.3
+numpy==1.24.3
+talib-binary==0.4.24
+textblob==0.17.1
