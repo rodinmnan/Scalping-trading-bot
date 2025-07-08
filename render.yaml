@@ -16,8 +16,11 @@ services:
       - key: TELEGRAM_TOKEN
         sync: false
       - key: TRADING_PAIRS
-        value: EURUSD,XAUUSD
+        value: EURUSD,GBPUSD 
       - key: SAFETY_MODE
         value: high
       - key: FREE_PLAN
         value: "true"
+buildCommand: |
+  python -m pip install --upgrade pip setuptools wheel
+  pip install --no-deps -e .
