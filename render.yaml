@@ -1,0 +1,23 @@
+# render.yaml
+services:
+  - type: web
+    name: scalping-bot
+    env: python
+    region: oregon  # Best for free tier
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TRADEMADE_API_KEY
+        sync: false
+      - key: TWELVE_DATA_API_KEY
+        sync: false
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: TRADING_PAIRS
+        value: EURUSD,XAUUSD
+      - key: SAFETY_MODE
+        value: high
+      - key: FREE_PLAN
+        value: "true"
